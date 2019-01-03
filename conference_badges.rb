@@ -7,15 +7,15 @@ def batch_badge_creator(attendees)
   attendees.each do |badge|
     badges.push("Hello, my name is #{badge}.")
   end
-  return badges
+  badges
 end
 
-def assign_rooms(speakers)
-  assign = []
-  speakers.each_with_index{|speaker, index|
-  assign.push("Hello, #{speaker}! You'll be assigned to room #{index + 1}!" )
-    }
-return assign
+def assign_rooms(attendees)
+  rooms = []
+  attendees.each_with_index {|speaker, index|
+    rooms.push("Hello, #{speaker}! You'll be assigned to room #{index + 1}!" )}
+
+  rooms
 end
 
 def printer(attendees)
